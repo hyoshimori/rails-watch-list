@@ -1,1 +1,138 @@
-// Specific CSS for your home-page
+//// Specific CSS for your home-page
+
+$top-header: 30px;
+$left-header: 20px;
+$right-header: 20px;
+$search-color: #FFD52C;
+
+body{
+  color: white;
+}
+
+//// body
+
+body{
+  background-color: black;
+}
+
+//// Header
+
+.header h1{
+  position: absolute;
+  color: white;
+  z-index: 20;
+  top: $top-header;
+  left: $left-header;
+}
+.create-button a{
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.create-button a:hover{
+  color: white;
+  outline: solid 2px $search-color;
+  transition: 0.2s ;
+}
+
+button.create-button{
+  background-color: black;
+  right: $right-header;
+  top: 35px;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 20;
+  border: solid 1px black;
+}
+
+.search-form{
+  position: absolute;
+  background-color: black;
+  top: 33px;
+  right: 120px;
+  z-index: 20;
+}
+
+.header input{
+  outline: none;
+}
+
+.header button{
+  border-radius: 50px;
+  color: $search-color;
+  background-color: transparent;
+  border: 0px;
+  z-index: 30;
+}
+
+.header input{
+  padding: 5px;
+  border-radius: 5px;
+  border: 0px;
+  outline:solid 2px $search-color;
+  background-color: transparent;
+  width: 135px;
+  top: -4px;
+  right: 0px;
+  z-index: 20;
+}
+
+//// Banner
+
+.banner img{
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+//// main
+
+//// cards
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 200px;
+}
+
+.card{
+  margin: 20px;
+  width: 200px;
+  height: 100px;
+  margin: auto;
+}
+
+div.cards img{
+
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+//// media queries
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .cards{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .cards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .cards{
+    grid-template-columns: 1fr;
+  }
+}
